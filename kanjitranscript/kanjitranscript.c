@@ -42,7 +42,7 @@ Datum osml10n_kanji_transcript(PG_FUNCTION_ARGS) {
   size_t numchars;
   unsigned i;
   char *kakasi_out;
-  char *kakasi_argv[6]={"kakasi","-Ja","-Ha","-Ka","-Ea","-s"};
+  char *kakasi_argv[6]={"kakasi","-i","euc","-Ja","-Ha","-Ka","-Ea","-s"};
   
   if (GetDatabaseEncoding() != PG_UTF8) {
     ereport(ERROR,(errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
@@ -132,7 +132,7 @@ Datum osml10n_kanji_transcript(PG_FUNCTION_ARGS) {
   // 4. run kakasi transliteration
   
   // run kakasi on eucjp string
-  kakasi_getopt_argv(6,kakasi_argv);
+  kakasi_getopt_argv(8,kakasi_argv);
   kakasi_out=kakasi_do(converted_start);
   free(converted_start);
   if (kakasi_out==NULL) {
