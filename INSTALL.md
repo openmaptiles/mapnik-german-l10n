@@ -40,7 +40,7 @@ I would be happy if somebody would contribute a spec-file for rpm based
 distributions.
 
 The build process will need to download country_osm_grid.sql from
-https://www.nominatim.org/data/country_grid.sql.gz
+https://nominatim.org/data/country_grid.sql.gz
 If your computer is offline for some reason. Just download this file and
 put it inside your build directory.
 
