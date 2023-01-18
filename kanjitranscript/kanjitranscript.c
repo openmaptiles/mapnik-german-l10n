@@ -42,7 +42,7 @@ Datum osml10n_kanji_transcript(PG_FUNCTION_ARGS) {
   size_t numchars;
   unsigned i;
   char *kakasi_out;
-  char *kakasi_argv[6]={"kakasi","-i","euc","-Ja","-Ha","-Ka","-Ea","-s"};
+  char *kakasi_argv[8]={"kakasi","-i","euc","-Ja","-Ha","-Ka","-Ea","-s"};
   
   if (GetDatabaseEncoding() != PG_UTF8) {
     ereport(ERROR,(errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
