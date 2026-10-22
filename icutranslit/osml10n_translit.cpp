@@ -24,6 +24,9 @@ extern "C" {
 #include <string.h>
 #include <mb/pg_wchar.h>
 #include <fmgr.h>
+#ifndef PG_VERSION_NUM
+#include <pg_config.h>
+#endif
 #if PG_VERSION_NUM >= 160000
 #include <varatt.h>
 #endif
